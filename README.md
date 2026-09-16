@@ -5,6 +5,10 @@
 
 ![预览](#) （运行后见页面）
 
+## 在线体验
+
+直接访问：[https://jasydongo.github.io/umbrella-anatomy/](https://jasydongo.github.io/umbrella-anatomy/)
+
 ## 运行
 
 纯静态页面，无需构建。任选一种方式启动本地服务器：
