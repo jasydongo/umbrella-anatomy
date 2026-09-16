@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>折叠雨伞 · 结构 3D 可视化</title>
+<link rel="icon" href="data:," />
+<link rel="stylesheet" href="./style.css" />
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three.module.js",
+    "three/addons/controls/OrbitControls.js": "./vendor/OrbitControls.js",
+    "three/addons/renderers/CSS2DRenderer.js": "./vendor/CSS2DRenderer.js",
+    "three/addons/environments/RoomEnvironment.js": "./vendor/RoomEnvironment.js"
+  }
+}
+</script>
+</head>
+<body>
+<div id="stage"></div>
+<div id="labelLayer"></div>
+
+<header class="hud title-card">
+  <h1>折叠雨伞 · 结构 3D 可视化</h1>
+  <p>三折伞骨架开合机构 —— 拖拽旋转 · 滚轮缩放 · 点击部件查看详情</p>
+</header>
+
+<aside class="hud side-panel" id="sidePanel">
+  <div class="panel-head">
+    <h2>部件构成</h2>
+    <span class="panel-sub" id="partStat"></span>
+  </div>
+  <ul id="partList"></ul>
+  <div id="detailCard" class="detail hidden"></div>
+</aside>
+
+<button class="hud panel-toggle" id="panelToggle" title="收起/展开部件面板">部件</button>
+
+<footer class="hud control-bar">
+  <div class="open-ctrl">
+    <span class="state-tag" id="stateTag">展开</span>
+    <span class="mini">收合</span>
+    <input id="openSlider" type="range" min="0" max="1000" value="0" aria-label="开合程度" />
+    <span class="mini">展开</span>
+  </div>
+  <div class="divider"></div>
+  <button id="btnPlay" class="btn primary">▶ 开合演示</button>
+  <button id="btnLabels" class="btn toggle">标签</button>
+  <button id="btnXray" class="btn toggle">透视伞面</button>
+  <button id="btnExplode" class="btn toggle">爆炸视图</button>
+  <button id="btnSpin" class="btn toggle">自动旋转</button>
+  <button id="btnReset" class="btn">重置视角</button>
+</footer>
+
+<script type="module" src="./main.js"></script>
+</body>
+</html>
